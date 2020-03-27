@@ -9,10 +9,6 @@ function _drawLists() {
   lists.forEach(list => (template += list.Template));
   document.getElementById("list-display").innerHTML = template;
 }
-function _drawItems() {
-  let newItem = _store.State.items;
-  document.getElementById("item-display").innerText = newItem[0];
-}
 
 //Public
 export default class ListController {
@@ -23,6 +19,7 @@ export default class ListController {
 
   // NOTE Add a new list and draw it to our page
   addList(event) {
+    event.preventDefault();
     let formData = event.target;
     let newListData = {
       name: formData.listName.value
@@ -39,17 +36,21 @@ export default class ListController {
   }
 
   // NOTE Add item to already existing list.
-  addItem(event) {
+  addItem(event, listId) {
+    event.preventDefault();
     let formData = event.target;
-    let newItemData = formData.addItem.value;
+    let newItem = formData.addItem.value;
 
-    _listService.addItem(newItemData);
+    _listService.addItem(newItem, listId);
     _drawLists();
     formData.reset();
   }
 
   // NOTE Remove item from list when user clicks 'delete'
-  deleteItem() {}
+  deleteItem(item) {
+    _listService.deleteItem(item);
+    _drawLists();
+  }
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems
 }

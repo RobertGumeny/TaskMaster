@@ -20,9 +20,18 @@ class ListService {
     _store.saveState();
   }
 
-  addItem(newItemData) {
-    let newItem = newItemData;
-    _store.State.items.push(newItem);
+  addItem(newItem, listId) {
+    let list = _store.State.lists.find(list => list.id == listId);
+    list.items.push(newItem);
+    console.log(list);
+    _store.saveState();
+  }
+  deleteItem(item) {
+    let index = _store.State.lists.findIndex(list => list.items == item);
+    let lists = _store.State.lists;
+    for (let i = 0; i < lists.length; i++) {
+      lists[i].items.splice(index, 1);
+    }
   }
 }
 
