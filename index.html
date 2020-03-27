@@ -38,10 +38,10 @@
     <main class="bg-main">
       <!-- SECTION Submit new list-->
       <div class="container">
-        <div class="row">
+        <div class="row mb-2">
           <div class="col-4 mx-auto text-center py-2">
             <h4>Create New List:</h4>
-            <form action="submit">
+            <form onsubmit="app.listController.addList(event)">
               <div class="form-row">
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -51,7 +51,7 @@
                   </div>
                   <input
                     type="text"
-                    name="newList"
+                    name="listName"
                     id="add-list"
                     class="form-control"
                     placeholder="List name..."
@@ -66,11 +66,12 @@
             </form>
           </div>
         </div>
+        <!-- !SECTION End submit new list -->
+        <!-- SECTION Begin displaying new lists-->
+
+        <div class="row" id="list-display"></div>
+        <!-- !SECTION End displaying new lists -->
       </div>
-      <!-- !SECTION End submit new list -->
-      <!-- SECTION Begin displaying new lists-->
-      <div class="row" id="list-display"></div>
-      <!-- !SECTION End displaying new lists -->
     </main>
 
     <!-- Bootstrap/Personal JS -->
