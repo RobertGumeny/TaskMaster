@@ -28,6 +28,14 @@ export default class ListController {
     _drawLists();
     formData.reset();
   }
+  renameList(event, listId) {
+    event.preventDefault();
+    let formData = event.target;
+    let newListName = formData.newListName.value;
+    _listService.renameList(newListName, listId);
+    _drawLists();
+    formData.reset();
+  }
 
   // NOTE Delete a list when user clicks 'delete'
   deleteList(listId) {
@@ -51,6 +59,4 @@ export default class ListController {
     _listService.deleteItem(item);
     _drawLists();
   }
-
-  //TODO: Your app will need the ability to create, and delete both lists and listItems
 }

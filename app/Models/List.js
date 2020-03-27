@@ -46,15 +46,13 @@ export default class List {
       item =>
         (template += /*html*/ `                
     
-    <li class="list-group-item">
-    <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="check1" />
-    <label for="check1" class="custom-control-label"><span id="item-display">${item}</span></label>
-    <button type="button" class="close text-danger" onclick="app.listController.deleteItem('${this.items}')"><span>&times;</span></button>
-    </div>
-    </li>
-  
-  `)
+      <li class ="list-group-item">
+      <input type="checkbox"/>
+      <span id="item-display">${item}</span>
+      <button type="button" class="close text-danger" onclick="app.listController.deleteItem('${this.items}')"><span>&times;</span></button>
+      </li>
+
+      `)
     );
     return template;
   }

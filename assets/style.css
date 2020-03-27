@@ -10,5 +10,9 @@ body {
   height: 100vh;
 }
 .btn-primary {
-  background-color: #1c7cd6;
+  background-color: #145c9e;
+}
+.list-header-bg {
+  background-color: #145c9e;
+  color: white;
 }
