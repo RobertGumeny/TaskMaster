@@ -1,0 +1,14 @@
+header {
+  background-color: #0b4f6c;
+  color: #1c7cd6;
+}
+body {
+  font-family: "Handlee", cursive;
+}
+.bg-main {
+  background-color: #dcc7be;
+  height: 100vh;
+}
+.btn-primary {
+  background-color: #1c7cd6;
+}

@@ -8,11 +8,87 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Handlee&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/style.css" />
     <title>TaskMaster</title>
   </head>
 
   <body>
+    <!-- SECTION Header -->
+    <header>
+      <div class="container">
+        <div class="row py-4">
+          <div class="col-4 mx-auto d-flex">
+            <i class="fas fa-check-circle fa-3x px-2"></i>
+            <h1>Task Master</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- !SECTION End Header-->
+    <main class="bg-main">
+      <!-- SECTION Submit new list-->
+      <div class="container">
+        <div class="row">
+          <div class="col-4 mx-auto text-center py-2">
+            <h4>Create New List:</h4>
+            <form action="submit">
+              <div class="form-row">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fas fa-list"></i>
+                    </div>
+                  </div>
+                  <input
+                    type="text"
+                    name="newList"
+                    id="add-list"
+                    class="form-control"
+                    placeholder="List name..."
+                  />
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                      Create
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- !SECTION End submit new list -->
+      <!-- SECTION Begin displaying new lists-->
+      <div class="row" id="list-display"></div>
+      <!-- !SECTION End displaying new lists -->
+    </main>
+
+    <!-- Bootstrap/Personal JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
     <script src="app/main.js" type="module"></script>
   </body>
 </html>
