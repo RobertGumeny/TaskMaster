@@ -1,6 +1,5 @@
 import List from "../Models/List.js";
 import _store from "../store.js";
-import store from "../store.js";
 
 //Public
 class ListService {

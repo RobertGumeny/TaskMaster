@@ -31,6 +31,14 @@ export default class List {
                       </div>
                     </div>
                 </form>
+                <form onsubmit="app.listController.renameList(event, '${this.id}')">
+                <div class="input-group">
+                  <input type="text" name="newListName" class="form-control" placeholder="Rename list...">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">+</button>
+                  </div>
+                </div>
+            </form>
               </div>
             </div>
           </div>
