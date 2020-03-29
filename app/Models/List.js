@@ -6,6 +6,7 @@ export default class List {
     this.id = data.id || generateId();
     this.name = data.name || "Unnamed List";
     this.items = data.items || [];
+    this.color = data.color || "blue";
   }
   //Be sure to add the methods needed to create the view template for this model
   //For starting out, your tasks may be strings alone, but later you may wish to turn them into full objects, that will be up to you
@@ -14,7 +15,7 @@ export default class List {
     return /*html*/ `
     <div class="col-md-3 my-4">
             <div class="card">
-              <div class="card-header text-center list-header-bg">
+              <div class="card-header text-center list-header-${this.color}">
                 <span id="list-name">${this.name}</span>
                 <button type="button" class="close text-danger" onclick="app.listController.deleteList('${this.id}')"><span>&times;</span></button>
               </div>

@@ -4,15 +4,36 @@ header {
 }
 body {
   font-family: "Handlee", cursive;
-}
-.bg-main {
   background-color: #dcc7be;
-  height: 100vh;
 }
 .btn-primary {
   background-color: #145c9e;
 }
-.list-header-bg {
+.list-header-blue {
   background-color: #145c9e;
   color: white;
+}
+.list-header-red {
+  background-color: rgb(158, 20, 20);
+  color: white;
+}
+.list-header-green {
+  background-color: #149e59;
+  color: white;
+}
+.list-header-yellow {
+  background-color: #eee01a;
+  color: black;
+}
+.blue-indicator {
+  color: #145c9e;
+}
+.red-indicator {
+  color: rgb(158, 20, 20);
+}
+.green-indicator {
+  color: #149e59;
+}
+.yellow-indicator {
+  color: #eee01a;
 }
