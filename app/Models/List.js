@@ -26,7 +26,7 @@ export default class List {
               <div class="card-footer">
                 <form onsubmit="app.listController.addItem(event, '${this.id}')">
                     <div class="input-group">
-                      <input type="text" name="addItem" class="form-control" placeholder="Add item...">
+                      <input type="text" name="addItem" class="form-control" placeholder="Add item..." required>
                       <div class="input-group-append">
                         <button type="submit" class="btn btn-primary">+</button>
                       </div>
