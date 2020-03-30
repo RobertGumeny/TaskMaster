@@ -39,11 +39,8 @@ class ListService {
     let list = _store.State.lists.find(list => list.id == listId);
     let index = list.items.findIndex(targetItem => targetItem == item);
     if (del == true) {
-      console.log(item);
-      console.log(list.items);
-      console.log(listId);
-      console.log(index);
       list.items.splice(index, 1);
+      _store.saveState();
     }
   }
 }
