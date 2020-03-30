@@ -23,20 +23,20 @@ export default class List {
               ${this.Items}
               </ul>
             
-              <div class="card-footer">
+              <div class="card-footer bg-white mx-auto">
                 <form onsubmit="app.listController.addItem(event, '${this.id}')">
                     <div class="input-group">
-                      <input type="text" name="addItem" class="form-control" placeholder="Add item..." required>
+                      <input type="text" name="addItem" class="form-control-sm" placeholder="Add item..." required>
                       <div class="input-group-append">
-                        <button type="submit" class="btn btn-primary">+</button>
+                        <button type="submit" class="btn btn-primary btn-sm">+</button>
                       </div>
                     </div>
                 </form>
                 <form onsubmit="app.listController.renameList(event, '${this.id}')">
-                <div class="input-group">
-                  <input type="text" name="newListName" class="form-control" placeholder="Rename list...">
+                <div class="input-group mt-1">
+                  <input type="text" name="newListName" class="form-control-sm" placeholder="Rename list...">
                   <div class="input-group-append">
-                    <button type="submit" class="btn btn-primary">+</button>
+                    <button type="submit" class="btn btn-primary btn-sm">+</button>
                   </div>
                 </div>
             </form>
