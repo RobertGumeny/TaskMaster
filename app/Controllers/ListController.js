@@ -56,8 +56,8 @@ export default class ListController {
   }
 
   // NOTE Remove item from list when user clicks 'delete'
-  deleteItem(item) {
-    _listService.deleteItem(item);
+  deleteItem(item, listId) {
+    _listService.deleteItem(item, listId);
     _drawLists();
   }
 }

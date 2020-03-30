@@ -58,7 +58,7 @@ export default class List {
       <li class ="list-group-item">
       <input type="checkbox"/>
       <span id="item-display">${item}</span>
-      <button type="button" class="close text-danger" onclick="app.listController.deleteItem('${this.items}')"><span>&times;</span></button>
+      <button type="button" class="close text-danger" onclick="app.listController.deleteItem('${item}','${this.id}')"><span>&times;</span></button>
       </li>
 
       `)

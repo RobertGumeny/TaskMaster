@@ -1,6 +1,8 @@
 import List from "../Models/List.js";
 import _store from "../store.js";
 
+function _itemMatch() {}
+
 //Public
 class ListService {
   // NOTE Attempting to get SweetAlert working
@@ -32,14 +34,16 @@ class ListService {
     console.log(list);
     _store.saveState();
   }
-  deleteItem(item) {
+  deleteItem(item, listId) {
     let del = confirm("Are you sure?");
+    let list = _store.State.lists.find(list => list.id == listId);
+    let index = list.items.findIndex(targetItem => targetItem == item);
     if (del == true) {
-      let index = _store.State.lists.findIndex(list => list.items == item);
-      let lists = _store.State.lists;
-      for (let i = 0; i < lists.length; i++) {
-        lists[i].items.splice(index, 1);
-      }
+      console.log(item);
+      console.log(list.items);
+      console.log(listId);
+      console.log(index);
+      list.items.splice(index, 1);
     }
   }
 }
